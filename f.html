@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>  CSS Form</title>
+<style>
+  * {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  body {
+    margin: 0;
+    height: 100vh;
+    background: radial-gradient(circle at top, #120101, #010610);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1200px;
+  }
+
+  .card {
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    width: 350px;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow:
+      12px 12px 25px rgba(0, 0, 0, 0.3),
+      -8px -8px 20px rgba(255, 255, 255, 0.6);
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease;
+  }
+
+  .card:hover {
+    transform: rotateX(6deg) rotateY(-6deg);
+  }
+
+  .card h2 {
+    text-align: center;
+    color: #010712;
+    margin-bottom: 25px;
+    transform: translateZ(40px);
+  }
+
+  .input-box {
+    margin-bottom: 18px;
+    transform: translateZ(30px);
+  }
+
+  .input-box label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #444;
+  }
+
+  .input-box input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    background: #f0f0f0;
+    box-shadow:
+      inset 4px 4px 8px rgba(0, 0, 0, 0.2),
+      inset -4px -4px 8px rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+  }
+
+  .input-box input:focus {
+    background: #fff;
+  }
+
+  .btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 14px;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    background: linear-gradient(145deg, #000309, #00050e);
+    box-shadow:
+      6px 6px 15px rgba(0, 0, 0, 0.4),
+      -4px -4px 10px rgba(255, 255, 255, 0.3);
+    transform: translateZ(45px);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .btn:hover {
+    transform: translateZ(45px) scale(1.05);
+    box-shadow:
+      10px 10px 25px rgba(0, 0, 0, 0.45);
+  }
+
+  .footer {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #555;
+    transform: translateZ(20px);
+  }
+
+  .footer a {
+    text-decoration: none;
+    color: #2a5298;
+    font-weight: 600;
+  }
+</style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Login form </h2>
+
+    <div class="input-box">
+      <label>Username</label>
+      <input type="text" placeholder="Enter username">
+    </div>
+
+    <div class="input-box">
+      <label>Password</label>
+      <input type="password" placeholder="Enter password">
+    </div>
+
+    <button class="btn">Login</button>
+
+    <div class="footer">
+      Don’t have an account? <a href="#">Sign Up</a>
+    </div>
+  </div>
+
+</body>
+</html>
